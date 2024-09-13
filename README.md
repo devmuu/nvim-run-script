@@ -16,5 +16,5 @@ NeoVim plugin to run scripts from line, selected text or current file.
 - Lazy
 
 ```
-{ "devmuu/nvim-run-script", lazy = false },
+{ "devmuu/nvim-run-script", lazy = false }
 ```
