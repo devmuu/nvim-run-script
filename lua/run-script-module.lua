@@ -84,7 +84,7 @@ function M.runLine()
     local mode = modeInfo.mode
 
     if mode ~= "n" then
-        runFile(1)
+        M.runFile(1)
     else
         local r,c = unpack(vim.api.nvim_win_get_cursor(0))
         local lines = vim.fn.getline(r, r)
@@ -102,7 +102,7 @@ function M.runFile(mod)
     local cmd = "terminal ~/.local/bin/compile " .. script_file
 
     if mod == 0 then
-        clearFile(script_file) print("Run file cleaned!")
+        M.clearFile(script_file) print("Run file cleaned!")
     else
         writeFile(script_file)
 
