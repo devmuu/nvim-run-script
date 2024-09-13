@@ -9,6 +9,7 @@ vim.api.nvim_create_user_command("ClearFileScript", runscript.clearFile, {})
 
 vim.api.nvim_create_user_command('ClearFileScript', function()
     require('run-script-module').clearFile()
+    print("Temporary file cleared!")
 end, { desc = "Clear temp file"})
 
 -- run current line
