@@ -5,7 +5,7 @@ local opts = {noremap = true, silent = true}
 vim.api.nvim_create_user_command("InfoRunScript", runscript.info, {})
 vim.api.nvim_create_user_command("RunLineScript", runscript.runLine, {})
 vim.api.nvim_create_user_command("RunFileScript", runscript.runFile, {})
-vim.api.nvim_create_user_command("ClearFileScript", require("run-script-module").clearFile(), {})
+vim.api.nvim_create_user_command("ClearFileScript", require("run-script-module").clearFile, {})
 
 -- run current line
 map("n", "<c-CR>", "<Cmd>RunFileScript<CR>", opts)
@@ -14,4 +14,4 @@ map("n", "<c-CR>", "<Cmd>RunFileScript<CR>", opts)
 map("x", "<c-CR>", "<Cmd>RunFileScript<CR>", opts)
 
 -- clean script temp file
-map("n", "<F9>", "<Cmd>require("run-script-module").clearFile()<CR>", opts)
+map("n", "<F9>", "<Cmd>require('run-script-module').clearFile()<CR>", opts)
