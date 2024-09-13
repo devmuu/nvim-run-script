@@ -17,7 +17,7 @@ end
 
 
 -- get temp filename
-function getFileName()
+function M.getFileName()
     local ft = vim.bo.filetype
     local script_file = "/tmp/script_lua_nvim." .. ft
 
@@ -54,7 +54,7 @@ end
 
 function M.clearFile(filename)
     if filename == nil then
-        filename = getFileName()
+        filename = M.getFileName()
     end
 
     local f = io.open(filename, "w+")

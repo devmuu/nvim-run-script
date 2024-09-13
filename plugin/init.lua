@@ -8,10 +8,10 @@ vim.api.nvim_create_user_command("RunFileScript", runscript.runFile, {})
 vim.api.nvim_create_user_command("ClearFileScript", runscript.clearFile, {})
 
 -- run current line
-map("n", "<c-CR>", "<Cmd>lua runscript.runFile<CR>", opts)
+map("n", "<c-CR>", "<Cmd>RunFileScript<CR>", opts)
 
 -- run file from selected lines
 map("x", "<c-CR>", "<Cmd>lua runscript.runFile<CR>", opts)
 
 -- clean script temp file
-map("n", "<F9>", "<Cmd>lua runscript.clearFile<CR>", opts)
+map("n", "<F9>", "<Cmd>ClearFileScript<CR>", opts)
