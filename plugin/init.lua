@@ -1,3 +1,3 @@
-local runscript = require("nvim-run-script")
+local runscript = require("run")
 
 vim.cmd [[command! RunScriptInfo lua runscript.info()]]
