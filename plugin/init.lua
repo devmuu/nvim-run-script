@@ -7,6 +7,10 @@ vim.api.nvim_create_user_command("RunLineScript", runscript.runLine, {})
 vim.api.nvim_create_user_command("RunFileScript", runscript.runFile, {})
 vim.api.nvim_create_user_command("ClearFileScript", runscript.clearFile, {})
 
+vim.api.nvim_create_user_command('ClearFileScript', function ()
+    runscript.clearFile
+end, { desc = "Clear temp file", nargs = '' })
+
 -- run current line
 map("n", "<c-CR>", "<Cmd>RunFileScript<CR>", opts)
 
