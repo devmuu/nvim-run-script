@@ -3,8 +3,8 @@ local map = vim.api.nvim_set_keymap
 local opts = {noremap = true, silent = true}
 
 vim.api.nvim_create_user_command("InfoRunScript", runscript.info, {})
-vim.api.nvim_create_user_command("RunLineScript", runscript.runLine(), {})
-vim.api.nvim_create_user_command("RunFileScript", runscript.runFile(), {})
+vim.api.nvim_create_user_command("RunLineScript", runscript.runLine, {})
+vim.api.nvim_create_user_command("RunFileScript", runscript.runFile, {})
 vim.api.nvim_create_user_command("ClearFileScript", runscript.clearFile(), {})
 
 -- run current line
