@@ -1,5 +1,6 @@
 local runscript = require("run-script-module")
 local map = vim.api.nvim_set_keymap
+local opts = {noremap = true, silent = true}
 
 vim.api.nvim_create_user_command("InfoRunScript", runscript.info, {})
 vim.api.nvim_create_user_command("RunLineScript", runscript.runLine, {})
