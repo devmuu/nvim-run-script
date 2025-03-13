@@ -1,3 +1,4 @@
+[![License](https://img.shields.io/badge/Licence-MIT-green.svg)](LICENSE.md)
 
 # Run-Script
 
