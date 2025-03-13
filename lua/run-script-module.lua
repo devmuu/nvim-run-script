@@ -43,7 +43,7 @@ function getLines()
         line_start = vstart[2]
         line_end = vend[2]
     else
-        local r,c = unpack(vim.api.nvim_win_get_cursor(0))
+        local r,c = table.unpack(vim.api.nvim_win_get_cursor(0))
         line_start = r
         line_end = r
     end
@@ -86,7 +86,7 @@ function M.runLine()
     if mode ~= "n" then
         M.runFile(1)
     else
-        local r,c = unpack(vim.api.nvim_win_get_cursor(0))
+        local r,c = table.unpack(vim.api.nvim_win_get_cursor(0))
         local lines = vim.fn.getline(r, r)
         local cmd = "terminal Rscript -e '" .. lines[1] .. "'"
 
